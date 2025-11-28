@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "ゲーム全体の制御ループであり、起動時の設定・入力受付・盤面更新・終了処理までをすべて管理する関数。",
+  "near": "ゲーム全体の制御ループであり、起動時の設定・入力受付・盤面描画・終了処理までをすべて管理する関数。",
+  "mid": "終了処理と盤面更新を行うが、入力受付は別の部分で処理される。",
+  "far": "サウンドエフェクトを再生するための関数。",
+  "near_src": "close",
+  "sim_near": 0.9672954082489014,
+  "sim_mid": 0.5845184326171875,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

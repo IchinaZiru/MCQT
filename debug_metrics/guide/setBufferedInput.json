@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "端末のカノニカルモード,ECHO（入力の画面表示）を有効化・無効化する関数",
+  "near": "端末のカノニカルモード、ECHO（入力の画面表示）を切り替えるための関数",
+  "mid": "端末の行編集機能を有効化または無効化する関数",
+  "far": "二次方程式を解くための関数",
+  "near_src": "close",
+  "sim_near": 0.9372773766517639,
+  "sim_mid": 0.5941771864891052,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

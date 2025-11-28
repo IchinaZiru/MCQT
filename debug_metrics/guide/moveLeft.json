@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "盤面をまず 90° 時計回転させて縦方向（上方向）にスライドを行い、その結果をさらに 270° 回転させて元の向きに戻す関数。",
+  "near": "盤面をまず 90° 反時計回転させて縦方向（上方向）にスライドを行い、その結果をさらに 270° 回転させて元の向きに戻す関数。",
+  "mid": "盤面を270°回転させ、次に駒をランダムに配置してから180°回転させる関数。",
+  "far": "文字列を受け取り、その文字列の全ての母音を取り除く関数。",
+  "near_src": "close",
+  "sim_near": 0.9852727055549622,
+  "sim_mid": 0.7975519299507141,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

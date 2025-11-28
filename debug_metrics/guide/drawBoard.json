@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "盤面のすべてのパネル（タイル）を、上から順番に走査し、各パネルに対して「指定された色」で上段・中段・下段の3工程で描画する。中段では、タイル内の数字を中央ぞろえで描画している。。",
+  "near": "盤面のすべてのパネル（タイル）を、上から順番に走査し、各パネルに対して「指定された色」で中段・上段・下段の3工程で描画する。中段では、タイル内の数字を中央ぞろえで描画している。",
+  "mid": "盤面のパネルはすべて、指定された色で塗りつぶされるが、数字は表示されない。",
+  "far": "ユーザー入力に応じて、音楽を再生するソフトウェアを開発する。",
+  "near_src": "close",
+  "sim_near": 0.9998560547828674,
+  "sim_mid": 0.6501581072807312,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

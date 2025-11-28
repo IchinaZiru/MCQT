@@ -1,0 +1,4 @@
+{
+  "function_name": "gameEnded",
+  "correct": "空きマスも、合体できるペアも一切無いときに終了かどうかを判定してtrue/falseを返す関数。"
+}

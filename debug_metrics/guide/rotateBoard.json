@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "4×4 の盤面を 90° 時計回りに回転させる関数。",
+  "near": "4×4 の盤面を 90° 反時計回りに回転させる関数。",
+  "mid": "4×4 の盤面の内容を逆順にする関数。",
+  "far": "ユーザー入力を取得する関数。",
+  "near_src": "close",
+  "sim_near": 0.9896344542503357,
+  "sim_mid": 0.713165819644928,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

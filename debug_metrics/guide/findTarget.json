@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "そのタイルがどこまで滑れるか（どのマスで止まるか）」を調べて、その最終位置を“戻り値”で返すだけの関数。",
+  "near": "そのタイルがどこまで滑れるか（どのマスで止まるか）を確認し、その最終位置を“戻り値”として返すだけの関数。",
+  "mid": "タイルが停止するマスを求め、その結果を返す処理。",
+  "far": "タイルの移動履歴を記録し、ログとして保存する。",
+  "near_src": "close",
+  "sim_near": 0.9706010818481445,
+  "sim_mid": 0.669171929359436,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

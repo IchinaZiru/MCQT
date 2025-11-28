@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "1列（または1行）のパネルをスライドし、同じ数のタイルが隣り合えば合体し、そのときにスコアを加算する関数。",
+  "near": "1列（または1行）のパネルをスライドし、異なる数のタイルが隣り合えば合体し、そのときにスコアを加算する関数。",
+  "mid": "スライドしてタイルの合計値を計算し、結果をスコアとして保存する関数。",
+  "far": "複数のプレイヤーが交互にスコアを競うボードゲーム。",
+  "near_src": "close",
+  "sim_near": 0.9909021258354187,
+  "sim_mid": 0.6461572647094727,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "function_name": "setBufferedInput",
+  "correct": "端末のカノニカルモード,ECHO（入力の画面表示）を有効化・無効化する関数"
+}

@@ -1,0 +1,4 @@
+{
+  "function_name": "rotateBoard",
+  "correct": "4×4 の盤面を 90° 時計回りに回転させる関数。"
+}

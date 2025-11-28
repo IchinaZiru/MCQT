@@ -1,0 +1,53 @@
+以下の四択問題に答えてください。
+【重要】出力は必ず以下の中から1文字だけ選んでください：
+A / B / C / D
+
+絶対に文章や説明は書かないでください。
+もしわからない場合でも必ず A〜D の中から最も適切なものを選んでください。
+
+```c
+
+/* @doc @function FUNC_589a84 @level L7
+ * @logical この関数は、標準入力のバッファリングを有効または無効にする。
+ * @precise 引数がtrueの場合は以前の設定を復元し、falseの場合は標準入力のカノニカルモードとエコーを無効にする。
+ * @unambiguous 引数に基づいて標準入力の設定を変更し、バッファリングの状態を切り替える。
+ * @exhaustive 引数がtrueでバッファリングが無効な場合は設定を復元し、falseで有効な場合は設定を変更する。
+ * @troubleshooting エラー処理は含まれていないため、`tcsetattr`や`tcgetattr`が失敗した場合の対処が必要。
+ * @contextualizing この関数は、対話型プログラムでユーザー入力の処理方法を変更する際に使用される。
+ * @condensing 標準入力のバッファリングを切り替える関数。
+*/
+
+void FUNC_589a84(bool enable)
+{
+	static bool enabled = true;
+	static struct termios old;
+	struct termios new;
+
+	if (enable && !enabled)
+	{
+		// restore the former settings
+		tcsetattr(STDIN_FILENO, TCSANOW, &old);
+		// set the new state
+		enabled = true;
+	}
+	else if (!enable && enabled)
+	{
+		// get the terminal settings for standard input
+		tcgetattr(STDIN_FILENO, &new);
+		// we want to keep the old setting to restore them at the end
+		old = new;
+		// disable canonical mode (buffered i/o) and local echo
+		new.c_lflag &= (~ICANON & ~ECHO);
+		// set the new settings immediately
+		tcsetattr(STDIN_FILENO, TCSANOW, &new);
+		// set the new state
+		enabled = false;
+	}
+}
+```
+
+問題: 関数の目的を最も正しく説明している選択肢は？
+A. 端末のカノニカルモード,ECHO（入力の画面表示）を有効化・無効化する関数
+B. 端末のフォントサイズを変更して文字の可読性を高める関数
+C. ユーザーが押したキーをASCIIコードに変換して表示する関数
+D. 端末のバッファサイズを増やしてスクロール速度を改善する関数

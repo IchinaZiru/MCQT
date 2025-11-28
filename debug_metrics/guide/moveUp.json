@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "盤面の全列（x方向）を1本ずつ取り出して、それぞれを“上方向”にスライド＆合体させる関数。",
+  "near": "盤面の全列（x方向）を1本ずつ取り出して、それぞれを“下方向”にスライド＆合体させる関数。",
+  "mid": "列ごとに要素を移動し、合体処理を行う関数。",
+  "far": "プレイヤーの入力を受け取る関数。",
+  "near_src": "close",
+  "sim_near": 0.980061948299408,
+  "sim_mid": 0.6962831616401672,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

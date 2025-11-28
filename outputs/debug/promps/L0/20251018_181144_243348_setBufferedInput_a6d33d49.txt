@@ -1,0 +1,43 @@
+以下の四択問題に答えてください。
+【重要】出力は必ず以下の中から1文字だけ選んでください：
+A / B / C / D
+
+絶対に文章や説明は書かないでください。
+もしわからない場合でも必ず A〜D の中から最も適切なものを選んでください。
+
+```c
+
+void FUNC_589a84(bool enable)
+{
+	static bool enabled = true;
+	static struct termios old;
+	struct termios new;
+
+	if (enable && !enabled)
+	{
+
+		tcsetattr(STDIN_FILENO, TCSANOW, &old);
+
+		enabled = true;
+	}
+	else if (!enable && enabled)
+	{
+
+		tcgetattr(STDIN_FILENO, &new);
+
+		old = new;
+
+		new.c_lflag &= (~ICANON & ~ECHO);
+
+		tcsetattr(STDIN_FILENO, TCSANOW, &new);
+
+		enabled = false;
+	}
+}
+```
+
+問題: 関数の目的を最も正しく説明している選択肢は？
+A. 端末のカノニカルモード,ECHO（入力の画面表示）を有効化・無効化する関数
+B. 端末のフォントサイズを変更して文字の可読性を高める関数
+C. ユーザーが押したキーをASCIIコードに変換して表示する関数
+D. 端末のバッファサイズを増やしてスクロール速度を改善する関数

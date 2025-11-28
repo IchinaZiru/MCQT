@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "盤面をまず 180° 時計回転させて縦方向（上方向）にスライドを行い、その結果をさらに 180° 回転させて元の向きに戻す関数。",
+  "near": "盤面をまず 180° 時計回転させて横方向（右方向）にスライドを行い、その結果をさらに 180° 回転させて元の向きに戻す関数。",
+  "mid": null,
+  "far": "盤面の全ての数字を二倍にする関数。",
+  "near_src": "close",
+  "sim_near": 0.9950368404388428,
+  "sim_mid": null,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "盤面をまず 270° 時計回転させて縦方向（上方向）にスライドを行い、その結果をさらに 90° 回転させて元の向きに戻す関数。",
+  "near": "盤面をまず 270° 反時計回転させて縦方向（上方向）にスライドを行い、その結果をさらに 90° 回転させて元の向きに戻す関数。",
+  "mid": "盤面を一切回転させずに縦方向（上方向）にスライドを行う関数。",
+  "far": "植物の成長を促進するために定期的に水を与えるガイドライン。",
+  "near_src": "close",
+  "sim_near": 0.9815766215324402,
+  "sim_mid": 0.709614098072052,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

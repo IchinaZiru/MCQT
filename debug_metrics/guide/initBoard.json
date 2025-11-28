@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "盤面をリセットして最初の2枚のタイルを出し、ゲームをスタート可能な状態にする関数。",
+  "near": "盤面をリセットして最初の2枚のタイルを配置し、ゲームを開始するための関数。",
+  "mid": "ゲームのスタート時にボードをゼロで埋める処理。",
+  "far": "スコアボードを表示するための画面。",
+  "near_src": "close",
+  "sim_near": 0.9717751145362854,
+  "sim_mid": 0.5924142599105835,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}
