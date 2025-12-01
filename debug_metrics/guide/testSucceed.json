@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "内部で定義されたテストデータを使って slideArray() 関数の動作を自動確認する関数。",
+  "near": "内部で定義されたテストデータを使って slideArray() 関数の動作を手動確認する関数。",
+  "mid": "内部で設定されたデータを用いて、配列のスライドをシミュレーションする関数。",
+  "far": "ネットワーク経由でデータを送信するための関数。",
+  "near_src": "close",
+  "sim_near": 0.9845067262649536,
+  "sim_mid": 0.7045817375183105,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

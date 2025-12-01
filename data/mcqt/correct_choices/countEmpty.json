@@ -1,0 +1,4 @@
+{
+  "function_name": "countEmpty",
+  "correct": "残りの盤面の空きマス数を数える関数"
+}

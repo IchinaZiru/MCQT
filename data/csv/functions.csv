@@ -1,0 +1,20 @@
+﻿ID,関数名,開始行,終了行,行数,引数,戻り値
+F001,getColors,25,35,11,"uint8_t value, uint8_t scheme, uint8_t *foreground, uint8_t *background",void
+F002,getDigitCount,37,46,10,uint32_t number,uint8_t
+F003,drawBoard,48,95,48,"uint8_t board[SIZE][SIZE], uint8_t scheme, uint32_t score",void
+F004,findTarget,97,127,31,"uint8_t array[SIZE], uint8_t x, uint8_t stop",uint8_t
+F005,slideArray,129,162,34,"uint8_t array[SIZE], uint32_t *score",bool
+F006,rotateBoard,164,179,16,uint8_t board[SIZE][SIZE],void
+F007,moveUp,181,190,10,"uint8_t board[SIZE][SIZE], uint32_t *score",bool
+F008,moveLeft,192,201,10,"uint8_t board[SIZE][SIZE], uint32_t *score",bool
+F009,moveDown,203,212,10,"uint8_t board[SIZE][SIZE], uint32_t *score",bool
+F010,moveRight,214,223,10,"uint8_t board[SIZE][SIZE], uint32_t *score",bool
+F011,findPairDown,225,238,14,uint8_t board[SIZE][SIZE],bool
+F012,countEmpty,240,255,16,uint8_t board[SIZE][SIZE],uint8_t
+F013,gameEnded,257,271,15,uint8_t board[SIZE][SIZE],bool
+F014,addRandom,273,307,35,uint8_t board[SIZE][SIZE],void
+F015,initBoard,309,321,13,uint8_t board[SIZE][SIZE],void
+F016,setBufferedInput,323,349,27,bool enable,void
+F017,testSucceed,351,429,79,,bool
+F018,signal_callback_handler,431,438,8,int signum,void
+F019,main,440,569,130,"int argc, char *argv[]",int

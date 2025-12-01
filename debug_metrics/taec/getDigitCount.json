@@ -1,0 +1,19 @@
+{
+  "mode": "taec",
+  "run_tag": null,
+  "correct": "与えられた数値の桁数を計算する。",
+  "near": "与えられた数値の桁数を数える。",
+  "mid": null,
+  "far": "日本の歴史について学ぶ。",
+  "near_src": "close",
+  "sim_near": 0.9563335180282593,
+  "sim_mid": null,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "legacy_used": false
+}

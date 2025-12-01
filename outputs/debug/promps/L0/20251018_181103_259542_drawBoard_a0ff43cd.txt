@@ -1,0 +1,64 @@
+以下の四択問題に答えてください。
+【重要】出力は必ず以下の中から1文字だけ選んでください：
+A / B / C / D
+
+絶対に文章や説明は書かないでください。
+もしわからない場合でも必ず A〜D の中から最も適切なものを選んでください。
+
+```c
+
+void FUNC_1f28c6(uint8_t board[SIZE][SIZE], uint8_t scheme, uint32_t score)
+{
+	uint8_t x, y, fg, bg;
+	printf("\033[H");
+	printf("2048.c %17u pts\n\n", score);
+	for (y = 0; y < SIZE; y++)
+	{
+		for (x = 0; x < SIZE; x++)
+		{
+
+
+			getColors(board[x][y], scheme, &fg, &bg);
+			printf("\033[38;5;%u;48;5;%um", fg, bg);
+			printf("       ");
+			printf("\033[m");
+		}
+		printf("\n");
+		for (x = 0; x < SIZE; x++)
+		{
+			getColors(board[x][y], scheme, &fg, &bg);
+			printf("\033[38;5;%u;48;5;%um", fg, bg);
+			if (board[x][y] != 0)
+			{
+				uint32_t number = 1 << board[x][y];
+				uint8_t t = 7 - getDigitCount(number);
+				printf("%*s%u%*s", t - t / 2, "", number, t / 2, "");
+			}
+			else
+			{
+				printf("   ·   ");
+			}
+			printf("\033[m");
+		}
+		printf("\n");
+		for (x = 0; x < SIZE; x++)
+		{
+			getColors(board[x][y], scheme, &fg, &bg);
+			printf("\033[38;5;%u;48;5;%um", fg, bg);
+			printf("       ");
+			printf("\033[m");
+		}
+		printf("\n");
+	}
+	printf("\n");
+	printf("        ←,↑,→,↓ or q        \n");
+	printf("\033[A");
+	printf("fg=%u bg=%u\n", fg, bg);
+}
+```
+
+問題: 関数の目的を最も正しく説明している選択肢は？
+A. 盤面の各タイルに色を当てて描画し、中段では数値を右寄せで表示する。
+B. 盤面のすべてのパネル（タイル）を、上から順番に走査し、各パネルに対して「指定された色」で上段・中段・下段の3工程で描画する。中段では、タイル内の数字を中央ぞろえで描画している。
+C. 描画の前に空きマスへ新しいタイル（2/4）を1枚追加してから、3工程の描画を行う。
+D. ユーザー入力（矢印/WASD）を受け取り、moveUp/Down/Left/Right を呼び出して盤面更新やゲーム終了判定まで一括で処理する。

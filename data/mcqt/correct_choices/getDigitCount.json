@@ -1,0 +1,4 @@
+{
+  "function_name": "getDigitCount",
+  "correct": "各タイルの数字の桁数を数える関数。"
+}

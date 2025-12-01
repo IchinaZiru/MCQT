@@ -1,0 +1,95 @@
+以下の四択問題に答えてください。
+【重要】出力は必ず以下の中から1文字だけ選んでください：
+A / B / C / D
+
+絶対に文章や説明は書かないでください。
+もしわからない場合でも必ず A〜D の中から最も適切なものを選んでください。
+
+```c
+
+bool FUNC_bd4fd4()
+{
+	uint8_t array[SIZE];
+
+
+	uint8_t data[] = {
+		0, 0, 0, 1, 1, 0, 0, 0, 0,
+		0, 0, 1, 1, 2, 0, 0, 0, 4,
+		0, 1, 0, 1, 2, 0, 0, 0, 4,
+		1, 0, 0, 1, 2, 0, 0, 0, 4,
+		1, 0, 1, 0, 2, 0, 0, 0, 4,
+		1, 1, 1, 0, 2, 1, 0, 0, 4,
+		1, 0, 1, 1, 2, 1, 0, 0, 4,
+		1, 1, 0, 1, 2, 1, 0, 0, 4,
+		1, 1, 1, 1, 2, 2, 0, 0, 8,
+		2, 2, 1, 1, 3, 2, 0, 0, 12,
+		1, 1, 2, 2, 2, 3, 0, 0, 12,
+		3, 0, 1, 1, 3, 2, 0, 0, 4,
+		2, 0, 1, 1, 2, 2, 0, 0, 4};
+	uint8_t *in, *out, *points;
+	uint8_t t, tests;
+	uint8_t i;
+	bool success = true;
+	uint32_t score;
+
+	tests = (sizeof(data) / sizeof(data[0])) / (2 * SIZE + 1);
+	for (t = 0; t < tests; t++)
+	{
+		in = data + t * (2 * SIZE + 1);
+		out = in + SIZE;
+		points = in + 2 * SIZE;
+		for (i = 0; i < SIZE; i++)
+		{
+			array[i] = in[i];
+		}
+		score = 0;
+		slideArray(array, &score);
+		for (i = 0; i < SIZE; i++)
+		{
+			if (array[i] != out[i])
+			{
+				success = false;
+			}
+		}
+		if (score != *points)
+		{
+			success = false;
+		}
+		if (success == false)
+		{
+			for (i = 0; i < SIZE; i++)
+			{
+				printf("%u ", in[i]);
+			}
+			printf("=> ");
+			for (i = 0; i < SIZE; i++)
+			{
+				printf("%u ", array[i]);
+			}
+			printf("(%u points) expected ", score);
+			for (i = 0; i < SIZE; i++)
+			{
+				printf("%u ", in[i]);
+			}
+			printf("=> ");
+			for (i = 0; i < SIZE; i++)
+			{
+				printf("%u ", out[i]);
+			}
+			printf("(%u points)\n", *points);
+			break;
+		}
+	}
+	if (success)
+	{
+		printf("All %u tests executed successfully\n", tests);
+	}
+	return success;
+}
+```
+
+問題: 関数の目的を最も正しく説明している選択肢は？
+A. ユーザーが手動で入力した盤面データをもとにスコア計算を行う関数。
+B. ゲームプレイ中に誤動作が起きたとき、盤面を初期化する関数。
+C. 全関数の戻り値を一括検証して異常終了を検出する関数。
+D. 内部で定義されたテストデータを使って slideArray() 関数の動作を自動確認する関数。

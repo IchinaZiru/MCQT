@@ -1,0 +1,57 @@
+以下の四択問題に答えてください。
+【重要】出力は必ず以下の中から1文字だけ選んでください：
+A / B / C / D
+
+絶対に文章や説明は書かないでください。
+もしわからない場合でも必ず A〜D の中から最も適切なものを選んでください。
+
+```c
+
+/* @doc @function FUNC_e7671d @level L7
+ * @logical この関数は、指定された配列内で特定の条件に基づいてターゲット位置を見つける。
+ * @precise 配列内の指定位置から逆方向に探索し、非ゼロかつ異なる値を持つ最初の要素の位置を返す。
+ * @unambiguous 指定された位置から逆方向に進み、非ゼロで現在の位置と異なる値を持つ最初の要素を見つけた場合、その位置を返す。
+ * @exhaustive 位置が0の場合はそのまま返し、探索中に停止位置に達した場合はその位置を返し、条件に合う要素が見つからない場合は元の位置を返す。
+ * @troubleshooting 無限ループを避けるため、停止位置を超えないようにし、配列の範囲外アクセスを防ぐ必要がある。
+ * @contextualizing この関数は、ゲームやデータ処理において、配列内の要素をスライドさせる際のターゲット位置を決定するために使用される。
+ * @condensing 配列内の指定位置から逆方向に探索し、条件に合うターゲット位置を見つける関数。
+*/
+
+uint8_t FUNC_e7671d(uint8_t array[SIZE], uint8_t x, uint8_t stop)
+{
+	uint8_t t;
+	// if the position is already on the first, don't evaluate
+	if (x == 0)
+	{
+		return x;
+	}
+	for (t = x - 1;; t--)
+	{
+		if (array[t] != 0)
+		{
+			if (array[t] != array[x])
+			{
+				// merge is not possible, take next position
+				return t + 1;
+			}
+			return t;
+		}
+		else
+		{
+			// we should not slide further, return this one
+			if (t == stop)
+			{
+				return t;
+			}
+		}
+	}
+	// we did not find a target
+	return x;
+}
+```
+
+問題: 関数の目的を最も正しく説明している選択肢は？
+A. 同値タイルに当たっても、その手前（t+1）の空きマスで止まる位置を返す。
+B. 実際の移動／合体までここで行い、スコア加点も済ませて最終位置を返す。
+C. そのタイルがどこまで滑れるか（どのマスで止まるか）」を調べて、その最終位置を“戻り値”で返す。
+D. 上下左右すべての方向を見て2次元盤面全体を探索し、最もスコアが伸びる最善手の座標を返すAI関数である。

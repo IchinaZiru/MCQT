@@ -1,0 +1,146 @@
+以下の四択問題に答えてください。
+【重要】出力は必ず以下の中から1文字だけ選んでください：
+A / B / C / D
+
+絶対に文章や説明は書かないでください。
+もしわからない場合でも必ず A〜D の中から最も適切なものを選んでください。
+
+```c
+
+int FUNC_d45819(int argc, char *argv[])
+{
+	uint8_t board[SIZE][SIZE];
+	uint8_t scheme = 0;
+	uint32_t score = 0;
+	int c;
+	bool success;
+
+
+	if (argc > 1)
+	{
+		if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0)
+		{
+			printf("Usage: 2048 [OPTION] | [MODE]\n");
+			printf("Play the game 2048 in the console\n\n");
+			printf("Options:\n");
+			printf("  -h,  --help       Show this help message.\n");
+			printf("  -v,  --version    Show version number.\n\n");
+			printf("Modes:\n");
+			printf("  bluered      Use a blue-to-red color scheme (requires 256-color terminal support).\n");
+			printf("  blackwhite   The black-to-white color scheme (requires 256-color terminal support).\n");
+			return EXIT_SUCCESS;
+		}
+		else if (strcmp(argv[1], "-v") == 0 || strcmp(argv[1], "--version") == 0)
+		{
+			printf("2048.c version %s\n", VERSION);
+			return EXIT_SUCCESS;
+		}
+		else if (strcmp(argv[1], "blackwhite") == 0)
+		{
+			scheme = 1;
+		}
+		else if (strcmp(argv[1], "bluered") == 0)
+		{
+			scheme = 2;
+		}
+		else if (strcmp(argv[1], "test") == 0)
+		{
+			return testSucceed() ? EXIT_SUCCESS : EXIT_FAILURE;
+		}
+		else
+		{
+			printf("Invalid option: %s\n\nTry '%s --help' for more options.\n", argv[1], argv[0]);
+			return EXIT_FAILURE;
+		}
+	}
+
+
+	printf("\033[?25l\033[2J");
+
+
+	signal(SIGINT, signal_callback_handler);
+
+	initBoard(board);
+	setBufferedInput(false);
+	drawBoard(board, scheme, score);
+	while (true)
+	{
+		c = getchar();
+		if (c == EOF)
+		{
+			puts("\nError! Cannot read keyboard input!");
+			break;
+		}
+		switch (c)
+		{
+		case 97:
+		case 104:
+		case 68:
+			success = moveLeft(board, &score);
+			break;
+		case 100:
+		case 108:
+		case 67:
+			success = moveRight(board, &score);
+			break;
+		case 119:
+		case 107:
+		case 65:
+			success = moveUp(board, &score);
+			break;
+		case 115:
+		case 106:
+		case 66:
+			success = moveDown(board, &score);
+			break;
+		default:
+			success = false;
+		}
+		if (success)
+		{
+			drawBoard(board, scheme, score);
+			usleep(150 * 1000);
+			addRandom(board);
+			drawBoard(board, scheme, score);
+			if (gameEnded(board))
+			{
+				printf("         GAME OVER          \n");
+				break;
+			}
+		}
+		if (c == 'q')
+		{
+			printf("        QUIT? (y/n)         \n");
+			c = getchar();
+			if (c == 'y')
+			{
+				break;
+			}
+			drawBoard(board, scheme, score);
+		}
+		if (c == 'r')
+		{
+			printf("       RESTART? (y/n)       \n");
+			c = getchar();
+			if (c == 'y')
+			{
+				initBoard(board);
+				score = 0;
+			}
+			drawBoard(board, scheme, score);
+		}
+	}
+	setBufferedInput(true);
+
+
+	printf("\033[?25h\033[m");
+
+	return EXIT_SUCCESS;
+}
+```
+
+問題: 関数の目的を最も正しく説明している選択肢は？
+A. 盤面の描画のみを行い、スコアや入力は処理しない関数。
+B. ゲーム全体の制御ループであり、起動時の設定・入力受付・盤面更新・終了処理までをすべて管理する関数。
+C. ターミナルの設定を初期化し、文字色を変更する関数。
+D. ユーザーのキー入力を受け取って盤面を初期化するだけの関数。

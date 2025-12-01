@@ -1,0 +1,4 @@
+{
+  "function_name": "testSucceed",
+  "correct": "内部で定義されたテストデータを使って slideArray() 関数の動作を自動確認する関数。"
+}

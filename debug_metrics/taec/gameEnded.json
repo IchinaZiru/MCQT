@@ -1,0 +1,19 @@
+{
+  "mode": "taec",
+  "run_tag": null,
+  "correct": "ゲームが終了したかどうかを判定する。",
+  "near": "ゲームが終了しているかを確認する。",
+  "mid": "ゲームの進行状況を評価する。",
+  "far": "新しいボードを初期化する。",
+  "near_src": "close",
+  "sim_near": 0.940169632434845,
+  "sim_mid": 0.708733856678009,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "legacy_used": false
+}

@@ -1,0 +1,60 @@
+以下の四択問題に答えてください。
+【重要】出力は必ず以下の中から1文字だけ選んでください：
+A / B / C / D
+
+絶対に文章や説明は書かないでください。
+もしわからない場合でも必ず A〜D の中から最も適切なものを選んでください。
+
+```c
+
+/* @doc @function FUNC_444592 @level L7
+ * @logical この関数は、指定された配列内の要素をスライドさせ、可能であれば隣接する同じ値をマージします。
+ * @precise 配列内の各要素を順にチェックし、ゼロでない場合はターゲット位置を見つけ、必要に応じて移動またはマージを行います。
+ * @unambiguous 配列の各要素を左から右にチェックし、ゼロでない要素を可能な限り左に移動し、同じ値が隣接する場合はマージしてスコアを更新します。
+ * @exhaustive 関数は、要素を移動またはマージした場合にtrueを返し、何も変更がない場合はfalseを返します。
+ * @troubleshooting この関数はエラーや例外処理を行わないため、入力配列が正しい形式であることを事前に確認する必要があります。
+ * @contextualizing この関数は、2048ゲームのようなパズルゲームのロジックで使用されることを想定しています。
+ * @condensing 配列内の要素を左にスライドし、同じ値をマージしてスコアを更新する関数です。
+*/
+
+bool FUNC_444592(uint8_t array[SIZE], uint32_t *score)
+{
+	bool success = false;
+	uint8_t x, t, stop = 0;
+
+	for (x = 0; x < SIZE; x++)
+	{
+		if (array[x] != 0)
+		{
+			t = findTarget(array, x, stop);
+			// if target is not original position, then move or merge
+			if (t != x)
+			{
+				// if target is zero, this is a move
+				if (array[t] == 0)
+				{
+					array[t] = array[x];
+				}
+				else if (array[t] == array[x])
+				{
+					// merge (increase power of two)
+					array[t]++;
+					// increase score
+					*score += 1 << array[t];
+					// set stop to avoid double merge
+					stop = t + 1;
+				}
+				array[x] = 0;
+				success = true;
+			}
+		}
+	}
+	return success;
+}
+```
+
+問題: 関数の目的を最も正しく説明している選択肢は？
+A. 1列（または1行）のパネルをスライドし、異なる数のタイルが隣り合えば合体し、そのときにスコアを加算する関数。
+B. スライドしてタイルの合計値を計算し、結果をスコアとして保存する関数。
+C. 複数のプレイヤーが交互にスコアを競うボードゲーム。
+D. 1列（または1行）のパネルをスライドし、同じ数のタイルが隣り合えば合体し、そのときにスコアを加算する関数。

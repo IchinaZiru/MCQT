@@ -1,0 +1,41 @@
+以下の四択問題に答えてください。
+【重要】出力は必ず以下の中から1文字だけ選んでください：
+A / B / C / D
+
+絶対に文章や説明は書かないでください。
+もしわからない場合でも必ず A〜D の中から最も適切なものを選んでください。
+
+```c
+
+/* @doc @function FUNC_93f46b @level L7
+ * @logical この関数は、ゲームが終了したかどうかを判定します。
+ * @precise ボード上に空きマスがあるか、隣接するペアが存在するかをチェックし、ゲームが続行可能かを判断します。
+ * @unambiguous ボードに空きがないかつ隣接するペアがない場合にゲーム終了と判定します。
+ * @exhaustive 空きマスがある場合や隣接するペアがある場合はfalseを返し、どちらもない場合はtrueを返します。
+ * @troubleshooting エラーや例外処理は特に行っておらず、入力が正しい前提で動作します。
+ * @contextualizing この関数は、2048のようなゲームで次の手が可能かどうかを確認するために使用されます。
+ * @condensing ゲームが終了したかをボードの状態から判定する関数です。
+*/
+
+bool FUNC_93f46b(uint8_t board[SIZE][SIZE])
+{
+	bool ended = true;
+	if (countEmpty(board) > 0)
+		return false;
+	if (findPairDown(board))
+		return false;
+	rotateBoard(board);
+	if (findPairDown(board))
+		ended = false;
+	rotateBoard(board);
+	rotateBoard(board);
+	rotateBoard(board);
+	return ended;
+}
+```
+
+問題: 関数の目的を最も正しく説明している選択肢は？
+A. 盤面に空きマスがあるかどうかを判定して、1つでもあればゲームを継続する関数。
+B. 空きマスも、合体できるペアも一切無いときに終了かどうかを判定してtrue/falseを返す関数。
+C. スコアが一定値を超えたら自動的にゲームを終了させる関数。
+D. ゲーム終了時にプレイヤーの名前とスコアをファイルに保存する関数。
