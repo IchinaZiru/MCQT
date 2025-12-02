@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "盤面の各タイルの数値に対応した色ペア（背景色＋文字色）を配列から動的に取得して設定する関数。",
+  "near": "盤面の各タイルの数値に対応した色ペア（文字色＋背景色）を配列から動的に取得して設定する関数。",
+  "mid": "各タイルの値に基づいてタイルのサイズを変更する関数。",
+  "far": "ファイルシステム上のファイルを削除する関数。",
+  "near_src": "close",
+  "sim_near": 0.9987371563911438,
+  "sim_mid": 0.5249939560890198,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}

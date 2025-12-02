@@ -1,0 +1,19 @@
+{
+  "mode": "taec",
+  "run_tag": null,
+  "correct": "配列内の要素を左にスライドさせ、同じ値が隣接している場合は合体させてスコアを更新する。",
+  "near": "配列内の要素を右にスライドさせ、同じ値が隣接している場合は合体させてスコアを更新する。",
+  "mid": null,
+  "far": "配列内のすべての要素をゼロに置き換える操作を行う。",
+  "near_src": "close",
+  "sim_near": 0.9729149341583252,
+  "sim_mid": null,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "legacy_used": false
+}

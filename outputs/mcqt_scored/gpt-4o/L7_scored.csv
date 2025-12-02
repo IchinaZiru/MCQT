@@ -1,0 +1,6 @@
+function,predicted,correct,is_correct,note
+main,B,B,True,
+moveDown,A,A,True,
+moveLeft,C,C,True,
+moveRight,B,B,True,
+moveUp,D,D,True,

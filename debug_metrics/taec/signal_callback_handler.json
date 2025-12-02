@@ -1,0 +1,19 @@
+{
+  "mode": "taec",
+  "run_tag": null,
+  "correct": "プログラムを終了し、端末の設定をリセットするための関数",
+  "near": "プログラムを停止し、端末の設定をリセットするための関数",
+  "mid": null,
+  "far": "ネットワーク接続を確立し、データを送受信するためのプログラム",
+  "near_src": "close",
+  "sim_near": 0.9321889877319336,
+  "sim_mid": null,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "legacy_used": false
+}

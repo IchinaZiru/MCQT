@@ -1,0 +1,19 @@
+{
+  "mode": "taec",
+  "run_tag": null,
+  "correct": "2048ゲームの盤面を描画する関数",
+  "near": "2048の盤面を描画する関数",
+  "mid": null,
+  "far": "数独パズルを解くアルゴリズム",
+  "near_src": "close",
+  "sim_near": 0.8133538365364075,
+  "sim_mid": null,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "legacy_used": false
+}

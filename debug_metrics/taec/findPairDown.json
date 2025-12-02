@@ -1,0 +1,19 @@
+{
+  "mode": "taec",
+  "run_tag": null,
+  "correct": "選択肢C: ボード内の任意の列において、隣接する要素が等しいペアが存在するかを確認する。",
+  "near": "選択肢C: ボード内の任意の列において、隣接する要素が異なるペアが存在するかを確認する。",
+  "mid": "選択肢C: ボード内の任意のマスにおいて、上下左右に同じ数字があるか確認する。",
+  "far": "選択肢C: ボードのサイズが奇数であるかどうかを確認する。",
+  "near_src": "close",
+  "sim_near": 0.9584516286849976,
+  "sim_mid": 0.7945086359977722,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "legacy_used": false
+}

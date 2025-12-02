@@ -1,0 +1,24 @@
+{
+  "mode": "guide",
+  "run_tag": null,
+  "correct": "ユーザーが Ctrl+C で中断したときに呼ばれ、ターミナル設定を元に戻して安全にプログラムを終了させるための関数。",
+  "near": "ユーザーが Ctrl+Z で中断したときに呼ばれ、ターミナル設定を元に戻して安全にプログラムを終了させるための関数。",
+  "mid": "ユーザーが特定の入力をしたときに応答するための関数。",
+  "far": "画像を処理してフィルタを適用するための関数。",
+  "near_src": "close",
+  "sim_near": 0.9331576228141785,
+  "sim_mid": 0.516953706741333,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "sources": {
+    "CORRECT_JSON_DIR": true,
+    "CORRECT_JSON": false,
+    "CORRECT_CSV": false,
+    "LEGACY_POOL_DIR": true
+  }
+}
