@@ -1,0 +1,4 @@
+{
+  "function_name": "signal_callback_handler",
+  "correct": "ユーザーが Ctrl+C で中断したときに呼ばれ、ターミナル設定を元に戻して安全にプログラムを終了させるための関数。"
+}
