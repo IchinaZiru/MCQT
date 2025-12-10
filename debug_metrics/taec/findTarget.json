@@ -1,0 +1,19 @@
+{
+  "mode": "taec",
+  "run_tag": null,
+  "correct": "指定された位置から逆方向に探索し、異なる値またはゼロに到達するまでの位置を見つける。",
+  "near": "指定された位置から逆方向に探索し、同じ値またはゼロに到達するまでの位置を見つける。",
+  "mid": null,
+  "far": "配列のすべての要素を逆順に並べ替える。",
+  "near_src": "close",
+  "sim_near": 0.9900760054588318,
+  "sim_mid": null,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "legacy_used": false
+}
