@@ -1,2 +1,5 @@
-# MCQT
-Multiple Choice Qustion Triplet.
+# D-MACQ
+
+## 研究用リポジトリ
+
+## 目的 : LLMの推論概念の定量化
