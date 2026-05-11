@@ -1,0 +1,19 @@
+{
+  "mode": "taec",
+  "run_tag": null,
+  "correct": "選択肢C: ボード上のすべてのセルを0で初期化し、ランダムな位置に2つの値を追加する。",
+  "near": "選択肢C: ボード上のすべてのセルを0で初期化し、ランダムな位置に1つの値を追加する。",
+  "mid": null,
+  "far": "選択肢C: ボードを初期化せず、すぐにゲームを開始する。",
+  "near_src": "close",
+  "sim_near": 0.9826704859733582,
+  "sim_mid": null,
+  "CLOSE_MIN": 0.8,
+  "FAR_MAX": 0.5,
+  "MID_PRECISE_MIN": 0.65,
+  "MID_UNAMBIG_MAX": 0.55,
+  "MID_EXHAUST_MAX": 0.55,
+  "DIVERSITY_RHO": 0.85,
+  "MMR_LAMBDA": 0.55,
+  "legacy_used": false
+}
